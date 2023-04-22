@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const { Circle, Square, Triangle } = require("./lib/shapes2");
 const SVG = require("./lib/svg2");
+const fs = require("fs");
 
 class CLI {
   run() {
@@ -27,7 +28,7 @@ class CLI {
         },
         {
           type: "checkbox",
-          name: "shape",
+          name: "shapeType",
           message: "Please choose a shape",
           choices: ["circle", "triangle", "square"],
         },
@@ -55,7 +56,7 @@ class CLI {
             break;
         }
 
-        shape.setColor(shapeColor);
+        // shape.setColor(shapeColor);
 
         const svg = new SVG();
         svg.setText(text, textColor);
@@ -64,9 +65,12 @@ class CLI {
         // function
       })
       .then(() => {
+        console.log("Generated logo.svg");
         // log a message to the console that the file has been generated.
       })
       .catch((error) => {
+        console.log(error);
+        console.log("Something went wrong.");
         // console.log(error) for debugging purposes
       });
   }
