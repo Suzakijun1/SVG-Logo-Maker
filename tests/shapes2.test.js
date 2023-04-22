@@ -1,4 +1,4 @@
-const { Square, Triangle, Circle } = require("./shapes");
+const { Square, Triangle, Circle } = require("../lib/shapes2");
 
 describe("Circle", () => {
   test("should render green circle", () => {
@@ -18,3 +18,19 @@ describe("Circle", () => {
 });
 
 // Write tests for others
+describe("Square", () => {
+  test("should render square", () => {
+    const expectedSvg = '<rect width="150" height= "150" fill="green" />';
+    const square = new Square();
+    square.setColor("green");
+    const actualSvg = square.render();
+    expectedSvg(actualSvg).toEqual(expectedSvg);
+  });
+  test("should accept a color", () => {
+    const expectedSvg = '<rect width="150" height= "150" fill="blue" />';
+    const square = new Square();
+    square.setColor("blue");
+    const actualSvg = square.render();
+    expect(actualSvg).toEqual(expectedSvg);
+  });
+});
