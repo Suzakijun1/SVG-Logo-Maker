@@ -13,10 +13,10 @@ class CLI {
           message: "Enter up to three characters for your SVG",
           validate: (nameInput) => {
             if (nameInput.length > 3) {
-              return true;
-            } else {
-              console.log("You must up to three characters.");
+              console.log("Cannot be greater than 3 characters");
               return false;
+            } else {
+              return true;
             }
           },
         },
@@ -55,7 +55,7 @@ class CLI {
             break;
         }
 
-        shape.setColor(textColor);
+        shape.setColor(shapeColor);
 
         const svg = new SVG();
         svg.setText(text, textColor);
@@ -73,3 +73,5 @@ class CLI {
 }
 
 module.exports = CLI;
+
+new CLI().run();
