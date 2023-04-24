@@ -20,14 +20,16 @@ describe("Circle", () => {
 // Write tests for others
 describe("Square", () => {
   test("should render square", () => {
-    const expectedSvg = '<rect width="150" height= "150" fill="green" />';
+    const expectedSvg =
+      '<rect x = "75" y = "35" width="150" height= "150" fill="green" />';
     const square = new Square();
     square.setColor("green");
 
     expect(expectedSvg).toEqual(square.render());
   });
   test("should accept a color", () => {
-    const expectedSvg = '<rect width="150" height= "150" fill="blue" />';
+    const expectedSvg =
+      '<rect x = "75" y = "35" width="150" height= "150" fill="blue" />';
     const square = new Square();
     square.setColor("blue");
     const actualSvg = square.render();
@@ -38,7 +40,7 @@ describe("Square", () => {
 describe("Triangle", () => {
   test("should render square", () => {
     const expectedSvg =
-      '<polygon points="150, 18 244, 182 56, 182 fill="green">';
+      '<polygon points="150, 18 244, 182 56, 182" fill="green"/>';
     const triangle = new Triangle();
     triangle.setColor("green");
 
@@ -46,7 +48,7 @@ describe("Triangle", () => {
   });
   test("should accept a color", () => {
     const expectedSvg =
-      '<polygon points="150, 18 244, 182 56, 182 fill="blue">';
+      '<polygon points="150, 18 244, 182 56, 182" fill="blue"/>';
     const triangle = new Triangle();
     triangle.setColor("blue");
     const actualSvg = triangle.render();
