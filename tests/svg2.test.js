@@ -21,6 +21,10 @@ test("should render a 300 x 200 svg element", () => {
   expect(svg.render()).toEqual(expectedSize);
 });
 
-test("should append text element", () => {});
+test("should append text element", () => {
+  // const expectedText = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"><text x="150" y="125" font-size="60" text-anchor="middle" fill="#333">SVG</text></svg>`;
+  // const svg = new SVG();
+  // expect(svg.render()).toEqual(expectedText);
+});
 
 test("should include a shape", () => {});
