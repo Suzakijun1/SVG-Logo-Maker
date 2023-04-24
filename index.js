@@ -62,9 +62,6 @@ class CLI {
         svg.setText(text, textColor);
         console.log("text:", text, "textColor", textColor);
         svg.setShape(shape);
-
-        console.log(typeof shapeType);
-        console.log(typeof shapeColor);
         fs.writeFile("newSvg.svg", svg.render(), function (err) {
           if (err) {
             console.error(err);
@@ -73,15 +70,6 @@ class CLI {
           }
         });
         // function
-      })
-      .then(() => {
-        console.log("Generated logo.svg");
-        // log a message to the console that the file has been generated.
-      })
-      .catch((error) => {
-        console.log(error);
-        console.log("Something went wrong.");
-        // console.log(error) for debugging purposes
       });
   }
 }
