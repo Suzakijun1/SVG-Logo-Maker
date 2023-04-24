@@ -27,7 +27,7 @@ class CLI {
           message: "What would you like the text color to be?",
         },
         {
-          type: "checkbox",
+          type: "list",
           name: "shapeType",
           message: "Please choose a shape",
           choices: ["circle", "triangle", "square"],
@@ -56,12 +56,22 @@ class CLI {
             break;
         }
 
-        // shape.setColor(shapeColor);
+        shape.setColor(shapeColor);
 
         const svg = new SVG();
         svg.setText(text, textColor);
+        console.log("text:", text, "textColor", textColor);
         svg.setShape(shape);
-        return writeFile("newSvg.svg", svg.render());
+
+        console.log(typeof shapeType);
+        console.log(typeof shapeColor);
+        fs.writeFile("newSvg.svg", svg.render(), function (err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log("Generated newSvg.svg");
+          }
+        });
         // function
       })
       .then(() => {
