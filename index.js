@@ -69,7 +69,6 @@ class CLI {
             console.log("Generated newSvg.svg");
           }
         });
-        // function
       });
   }
 }
