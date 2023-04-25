@@ -13,8 +13,7 @@ This application will allow users to create simple SVG logos. The user may choos
 
 ![My Image](img/svg-screenshot.png);
 
-Example Generated SVG
-![My Image](img/circle_example.png) ![My Image](img/triangle_example.png) ![My Image](img/square_example.png)
+![My Image](img/circle_example.png)![My Image](img/triangle_example.png)![My Image](img/square_example.png)
 
 ## installation
 
