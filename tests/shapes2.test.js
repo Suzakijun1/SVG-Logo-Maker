@@ -40,7 +40,7 @@ describe("Square", () => {
 describe("Triangle", () => {
   test("should render square", () => {
     const expectedSvg =
-      '<polygon points="150, 18 244, 182 56, 182" fill="green"/>';
+      '<polygon points="150, 2 270, 182 33, 182" fill="green"/>';
     const triangle = new Triangle();
     triangle.setColor("green");
 
@@ -48,7 +48,7 @@ describe("Triangle", () => {
   });
   test("should accept a color", () => {
     const expectedSvg =
-      '<polygon points="150, 18 244, 182 56, 182" fill="blue"/>';
+      '<polygon points="150, 2 270, 182 33, 182" fill="blue"/>';
     const triangle = new Triangle();
     triangle.setColor("blue");
     const actualSvg = triangle.render();
