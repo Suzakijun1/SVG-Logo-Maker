@@ -60,7 +60,6 @@ class CLI {
 
         const svg = new SVG();
         svg.setText(text, textColor);
-        console.log("text:", text, "textColor", textColor);
         svg.setShape(shape);
         fs.writeFile("newSvg.svg", svg.render(), function (err) {
           if (err) {
