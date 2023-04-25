@@ -9,7 +9,14 @@ This application will allow users to create simple SVG logos. The user may choos
 3. Please choose a Shape
 4. What would you like the shape color to be?
 
+## Screenshots
+
+![My Image](img/svg-screenshot.png);
+
+![My Image](img/circle_example.png)
+
 ## installation
+
 1. Clone the repo
 2. Open in VS Code
 3. open the terminal and install node.js.
@@ -18,4 +25,5 @@ This application will allow users to create simple SVG logos. The user may choos
 6. Run the application by typing "node index.js" within the terminal.
 
 ## Test Instructions
+
 In order to run the tests, open the terminal and type the command "npm run test".
