@@ -58,10 +58,11 @@ class CLI {
 
         shape.setColor(shapeColor);
 
+        const svgPath = "./example/newSvg.svg";
         const svg = new SVG();
         svg.setText(text, textColor);
         svg.setShape(shape);
-        fs.writeFile("newSvg.svg", svg.render(), function (err) {
+        fs.writeFile(svgPath, svg.render(), function (err) {
           if (err) {
             console.error(err);
           } else {

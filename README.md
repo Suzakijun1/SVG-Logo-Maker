@@ -15,6 +15,11 @@ This application will allow users to create simple SVG logos. The user may choos
 
 ![My Image](img/circle_example.png)![My Image](img/triangle_example.png)![My Image](img/square_example.png)
 
+## Video Demonstration
+
+Here is a link to a video that demonstrates the functionality of the application.
+https://drive.google.com/file/d/1aqsE08atnRkHP1tLNP2X58_XfH1XM-6B/view
+
 ## installation
 
 1. Clone the repo
